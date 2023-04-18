@@ -12,7 +12,11 @@ toaru*)
 ```
 - Configure with:
 ```
-./configure --host=x86_64-pc-toaru --target=x86_64-pc-toaru --with-mbedtls=/home/klange/Projects/third-party/mbedtls-2.26.0 --disable-ipv6  --disable-unix-sockets --disable-pthreads --disable-threaded-resolver --disable-ntlm --disable-socketpair --with-ca-path=/usr/share/ca-certificates --enable-shared
+./configure --host=x86_64-pc-toaru --target=x86_64-pc-toaru --with-mbedtls=/home/klange/Projects/third-party/mbedtls-2.26.0 --disable-ipv6  --disable-unix-sockets --disable-threaded-resolver --disable-ntlm --disable-socketpair --with-ca-path=/usr/share/ca-certificates --enable-shared
+```
+- Install with:
+```
+cp -r lib/.libs/libcurl.so* ~/Projects/toaruos/base/usr/lib/ && cp src/.libs/curl ~/Projects/toaruos/base/usr/bin/
 ```
 
 
