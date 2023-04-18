@@ -82,6 +82,11 @@
 
 #include "curl_config.h"
 
+#ifdef __toaru__
+#undef  HAVE_FCNTL_O_NONBLOCK
+#define HAVE_IOCTL_FIONBIO 1
+#endif
+
 #else /* HAVE_CONFIG_H */
 
 #ifdef _WIN32_WCE

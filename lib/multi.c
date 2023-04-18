@@ -1057,6 +1057,7 @@ static int multi_getsock(struct Curl_easy *data,
 
 }
 
+#ifndef __toaru__
 CURLMcode curl_multi_fdset(struct Curl_multi *multi,
                            fd_set *read_fd_set, fd_set *write_fd_set,
                            fd_set *exc_fd_set, int *max_fd)
@@ -1116,6 +1117,7 @@ CURLMcode curl_multi_fdset(struct Curl_multi *multi,
 
   return CURLM_OK;
 }
+#endif
 
 #ifdef USE_WINSOCK
 /* Reset FD_WRITE for TCP sockets. Nothing is actually sent. UDP sockets can't
